@@ -1,0 +1,80 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-kerning: normal;
+}
+
+#background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://r2.flowith.net/files/o/1754438899617-web_background_amour_et_célébration_index_1@1024x1024.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+#fireworks-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    pointer-events: none;
+}
+
+#content-container {
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
+}
+
+#message-container p {
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+}
+
+.cursor::after {
+    content: '|';
+    animation: blink 0.7s infinite;
+    display: inline-block;
+    vertical-align: baseline;
+    margin-left: 0.1em;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.heart {
+    position: fixed;
+    bottom: -2em;
+    font-family: serif;
+    color: #ff79c6;
+    text-shadow: 0 0 5px #ff79c6, 0 0 15px #ffc0cb;
+    animation-name: floatUp;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-60vh) translateX(20px);
+    }
+    100% {
+        transform: translateY(-120vh) translateX(-20px);
+        opacity: 0;
+    }
+}

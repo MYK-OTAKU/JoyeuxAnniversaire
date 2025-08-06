@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joyeux Anniversaire, Mon Amour</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-black">
+
+    <audio id="bg-music" autostart loop src="https://www.youtube.com/watch?v=5u4xTa3LR2U"></audio>
+
+    <div id="background-container"></div>
+    <canvas id="fireworks-canvas"></canvas>
+
+    <main id="content-container" class="relative z-10 flex flex-col items-center justify-center w-full min-h-screen p-4 sm:p-8 overflow-y-auto">
+        <div class="text-center w-full max-w-4xl mx-auto flex flex-col items-center justify-center py-16">
+            <h1 id="main-title" class="text-4xl md:text-6xl font-bold text-white opacity-0 transition-opacity duration-1000" style="font-family: 'Playfair Display', serif;">
+                Pour Ma Touty, la Reine du 06 Août
+            </h1>
+
+            <div id="message-container" class="mt-8 text-xl md:text-2xl lg:text-3xl text-gray-200" style="font-family: 'Cormorant Garamond', serif;">
+                <!-- Le message animé sera inséré ici -->
+            </div>
+
+            <div id="cake-container" class="mt-8 opacity-0 scale-90 transition-all duration-1000 ease-in-out">
+                <img src="https://r2.flowith.net/files/o/1754438956223-elegant_romantic_birthday_cake_index_0@1024x1024.png" 
+                     alt="Gâteau d'anniversaire romantique avec 20 bougies" 
+                     class="w-48 h-48 md:w-64 md:h-64 object-contain drop-shadow-lg">
+            </div>
+        </div>
+    </main>
+
+    <button id="music-control" class="fixed z-20 bottom-6 right-6 md:bottom-8 md:right-8 bg-white/10 backdrop-blur-sm text-white rounded-full p-3 hover:bg-white/20 transition-colors focus:outline-none">
+        <i data-lucide="play" id="play-icon" class="w-5 h-5 md:w-6 md:h-6"></i>
+        <i data-lucide="pause" id="pause-icon" class="w-5 h-5 md:w-6 md:h-6 hidden"></i>
+    </button>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
